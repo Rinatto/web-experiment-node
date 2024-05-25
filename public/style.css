@@ -1,0 +1,21 @@
+#loader {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+canvas {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 90%;
+}

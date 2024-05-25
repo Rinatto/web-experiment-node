@@ -20,6 +20,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "chart.js": "^4.4.3",
     "express": "^4.19.2",
     "netlify-cli": "^17.23.8"
   }
