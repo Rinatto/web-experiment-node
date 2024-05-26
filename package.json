@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
     "test:ts": "ts-node ts/main.ts",
     "test:js": "node js/main.js",
-    "start": "netlify dev",
-    "deploy": "gh-pages -d public"
+    "start": "netlify dev"
   },
   "keywords": [],
   "author": "",
