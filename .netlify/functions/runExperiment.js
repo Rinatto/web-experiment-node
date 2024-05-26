@@ -15,7 +15,7 @@ exports.handler = async (event) => {
     console.log(`Iterations: ${iterations}`);
 
     return new Promise((resolve) => {
-        const command = `node ${path.resolve(__dirname, './experiment_runs/run_experiments.js')} ${iterations}`;
+        const command = `node ${path.resolve(__dirname, 'run_experiments.js')} ${iterations}`;
         console.log(`Executing command: ${command}`);
         
         exec(command, (error, stdout, stderr) => {
@@ -30,7 +30,7 @@ exports.handler = async (event) => {
             console.log(`stdout: ${stdout}`);
             console.log(`stderr: ${stderr}`);
 
-            const resultsPath = path.resolve(__dirname, 'experiment_runs/results.json');
+            const resultsPath = path.resolve(__dirname, 'results.json');
             console.log(`Reading results from: ${resultsPath}`);
             
             fs.readFile(resultsPath, 'utf8', (err, data) => {

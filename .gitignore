@@ -9,3 +9,6 @@ netlify/functions-internal/
 netlify/blobs-serve/
 netlify/state.json
 
+
+# Local Netlify folder
+.netlify
