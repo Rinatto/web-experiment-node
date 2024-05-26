@@ -1,32 +1,42 @@
 [
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 12.211ms",
-    "duration": 1519
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.681ms",
+    "duration": 1235
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 19.027ms",
-    "duration": 304
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 17.087ms",
+    "duration": 289
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 12.598ms",
-    "duration": 1421
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.833ms",
+    "duration": 1240
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 21.591ms",
-    "duration": 344
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 16.98ms",
+    "duration": 291
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 12.38ms",
-    "duration": 1569
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.775ms",
+    "duration": 1234
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 20.359ms",
-    "duration": 333
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.879ms",
+    "duration": 292
+  },
+  {
+    "label": "test:ts",
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.622ms",
+    "duration": 1219
+  },
+  {
+    "label": "test:js",
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 17.433ms",
+    "duration": 305
   }
 ]

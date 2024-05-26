@@ -15,7 +15,12 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         },
         body: JSON.stringify({ iterations }),
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         loader.style.display = 'none';
         resultsChart.style.display = 'block';
@@ -79,4 +84,3 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         console.error('Error:', error);
     });
 });
-
