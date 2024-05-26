@@ -1,42 +1,52 @@
 [
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.681ms",
-    "duration": 1235
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 13.698ms",
+    "duration": 1414
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 17.087ms",
-    "duration": 289
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 19.57ms",
+    "duration": 317
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.833ms",
-    "duration": 1240
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 13.049ms",
+    "duration": 1359
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 16.98ms",
-    "duration": 291
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 20.249ms",
+    "duration": 310
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.775ms",
-    "duration": 1234
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 12.023ms",
+    "duration": 1348
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.879ms",
-    "duration": 292
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 17.429ms",
+    "duration": 316
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.622ms",
-    "duration": 1219
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.459ms",
+    "duration": 1344
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 17.433ms",
-    "duration": 305
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 20.251ms",
+    "duration": 314
+  },
+  {
+    "label": "test:ts",
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.267ms",
+    "duration": 1347
+  },
+  {
+    "label": "test:js",
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.302ms",
+    "duration": 313
   }
 ]

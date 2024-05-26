@@ -1,4 +1,11 @@
-node_modules
 .DS_Store
 # Local Netlify folder
 .netlify
+
+# Ignore node_modules
+node_modules/
+
+# Ignore Netlify temporary files
+netlify/functions-internal/
+netlify/blobs-serve/
+netlify/state.json
