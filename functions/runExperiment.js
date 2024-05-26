@@ -2,12 +2,8 @@ const { exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-exports.handler = async (event, context) => {
-    console.log('Event:', event);
-    console.log('Context:', context);
-
+exports.handler = async (event) => {
     const { iterations } = JSON.parse(event.body);
-    console.log('Iterations:', iterations);
 
     if (iterations > 100) {
         return {
@@ -16,39 +12,52 @@ exports.handler = async (event, context) => {
         };
     }
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         const command = `node ${path.resolve(__dirname, '../experiment_runs/run_experiments.js')} ${iterations}`;
-        console.log('Executing command:', command);
-
         exec(command, (error, stdout, stderr) => {
             if (error) {
-                console.error(`exec error: ${error}`);
                 return resolve({
                     statusCode: 500,
                     body: JSON.stringify({ error: 'Failed to run experiment' }),
                 });
             }
 
-            console.log('Command stdout:', stdout);
-            console.log('Command stderr:', stderr);
-
             const resultsPath = path.resolve(__dirname, '../experiment_runs/results.json');
-            console.log('Reading results from:', resultsPath);
-
             fs.readFile(resultsPath, 'utf8', (err, data) => {
                 if (err) {
-                    console.error(`readFile error: ${err}`);
                     return resolve({
                         statusCode: 500,
                         body: JSON.stringify({ error: 'Failed to read results' }),
                     });
                 }
 
-                console.log('Results data:', data);
+                const results = JSON.parse(data);
+                const response = { 
+                    iterations: results,
+                    averageResults: null 
+                };
 
-                resolve({
+                if (iterations > 1) {
+                    const tsResults = results.filter(r => r.label === 'test:ts').map(r => parseFloat(r.output.match(/TS Dynamic Structure Change: (\d+\.\d+)ms/)[1]));
+                    const jsResults = results.filter(r => r.label === 'test:js').map(r => parseFloat(r.output.match(/Dynamic Structure Change: (\d+\.\d+)ms/)[1]));
+
+                    const average = arr => arr.reduce((a, b) => a + b, 0) / arr.length;
+
+                    response.averageResults = [
+                        {
+                            label: 'test:ts',
+                            average: average(tsResults),
+                        },
+                        {
+                            label: 'test:js',
+                            average: average(jsResults),
+                        }
+                    ];
+                }
+
+                return resolve({
                     statusCode: 200,
-                    body: JSON.stringify(JSON.parse(data)),
+                    body: JSON.stringify(response),
                 });
             });
         });

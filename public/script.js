@@ -20,16 +20,24 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         loader.style.display = 'none';
         resultsChart.style.display = 'block';
         jsonOutput.style.display = 'block';
-        jsonOutput.textContent = JSON.stringify(data, null, 2);
+        jsonOutput.textContent = JSON.stringify(data.iterations, null, 2);
 
-        const tsChanges = data.filter(result => result.label === 'test:ts').map(result => parseFloat(result.output.match(/TS Dynamic Structure Change: (\d+\.\d+)ms/)[1]));
-        const jsChanges = data.filter(result => result.label === 'test:js').map(result => parseFloat(result.output.match(/Dynamic Structure Change: (\d+\.\d+)ms/)[1]));
+        const tsChanges = [];
+        const jsChanges = [];
+
+        if (iterations > 2) {
+            tsChanges.push(data.averageResults.find(result => result.label === 'test:ts').average);
+            jsChanges.push(data.averageResults.find(result => result.label === 'test:js').average);
+        } else {
+            tsChanges.push(...data.iterations.filter(result => result.label === 'test:ts').map(result => parseFloat(result.output.match(/TS Dynamic Structure Change: (\d+\.\d+)ms/)[1])));
+            jsChanges.push(...data.iterations.filter(result => result.label === 'test:js').map(result => parseFloat(result.output.match(/Dynamic Structure Change: (\d+\.\d+)ms/)[1])));
+        }
 
         const ctx = document.getElementById('resultsChart').getContext('2d');
         new Chart(ctx, {
             type: 'line',
             data: {
-                labels: Array.from({ length: tsChanges.length }, (_, i) => i + 1),
+                labels: Array.from({ length: iterations > 2 ? 1 : tsChanges.length }, (_, i) => i + 1),
                 datasets: [
                     {
                         label: 'TS Dynamic Structure Change (ms)',
@@ -59,7 +67,7 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
                     y: {
                         title: {
                             display: true,
-                            text: 'Duration (ms)'
+                            text: 'Dynamic Structure Change (ms)'
                         }
                     }
                 }
@@ -71,3 +79,4 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         console.error('Error:', error);
     });
 });
+
