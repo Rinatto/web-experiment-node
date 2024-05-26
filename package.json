@@ -6,7 +6,8 @@
   "scripts": {
     "test:ts": "ts-node ts/main.ts",
     "test:js": "node js/main.js",
-    "start": "netlify dev"
+    "start": "netlify dev",
+    "deploy": "gh-pages -d public"
   },
   "keywords": [],
   "author": "",
