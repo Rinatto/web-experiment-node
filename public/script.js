@@ -8,7 +8,7 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
     resultsChart.style.display = 'none';
     jsonOutput.style.display = 'none';
 
-    fetch('/.netlify/functions/runExperiment', {
+    fetch('/.netlify/functions/experimentFunction', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

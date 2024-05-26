@@ -1,5 +1,6 @@
 .DS_Store
 # Local Netlify folder
+.netlify
 
 # Ignore node_modules
 node_modules/
