@@ -1,18 +1,18 @@
 [
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.773ms"
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 11.114ms"
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.321ms"
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 19.9ms"
   },
   {
     "label": "test:ts",
-    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 13.381ms"
+    "output": "> ts-js-experiment@1.0.0 test:ts\n> ts-node ts/main.ts\n\nTS Dynamic Structure Change: 10.429ms"
   },
   {
     "label": "test:js",
-    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.435ms"
+    "output": "> ts-js-experiment@1.0.0 test:js\n> node js/main.js\n\nDynamic Structure Change: 18.468ms"
   }
 ]
