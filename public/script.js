@@ -76,14 +76,3 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         console.error('Error:', error);
     });
 });
-
-document.getElementById('testFunctionButton').addEventListener('click', () => {
-    fetch('/.netlify/functions/testFunction')
-        .then(response => response.json())
-        .then(data => {
-            alert(data.message);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-});
