@@ -8,7 +8,7 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
     resultsChart.style.display = 'none';
     jsonOutput.style.display = 'none';
 
-    fetch('.netlify/functions/runExperiment', {
+    fetch('/.netlify/functions/runExperiment', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -75,4 +75,15 @@ document.getElementById('runExperimentButton').addEventListener('click', () => {
         loader.style.display = 'none';
         console.error('Error:', error);
     });
+});
+
+document.getElementById('testFunctionButton').addEventListener('click', () => {
+    fetch('/.netlify/functions/testFunction')
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 });

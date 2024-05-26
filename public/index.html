@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TS-JS Experiment</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>TS-JS Experiment</h1>
-    <input type="number" id="iterationsInput" placeholder="Enter number of iterations" max="100">
+    <input type="number" id="iterationsInput" placeholder="Enter iterations" />
     <button id="runExperimentButton">Run Experiment</button>
-    <div id="loader" style="display: none;">Loading...</div>
-    <canvas id="resultsChart" style="display: none;"></canvas>
-    <pre id="jsonOutput" style="display: none;"></pre>
+    <button id="testFunctionButton">Test Function</button>
+    <div id="loader" style="display:none;">Loading...</div>
+    <pre id="jsonOutput" style="display:none;"></pre>
+    <canvas id="resultsChart" style="display:none;"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
-
 
