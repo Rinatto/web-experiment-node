@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "St Petersburg",
+			"country": {
+				"code": "RU",
+				"name": "Russia"
+			},
+			"subdivision": {
+				"code": "SPE",
+				"name": "St.-Petersburg"
+			},
+			"timezone": "Europe/Moscow",
+			"latitude": 59.8983,
+			"longitude": 30.2618
+		},
+		"timestamp": 1716669419131
+	}
+}
