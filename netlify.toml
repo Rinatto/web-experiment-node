@@ -2,6 +2,9 @@
   publish = "public"
   functions = ".netlify/functions"
 
+[context.production.environment]
+  NODE_VERSION = "18.20.2"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
